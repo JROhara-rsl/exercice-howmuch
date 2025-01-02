@@ -1,13 +1,12 @@
 /* //////////////////////////////////////////////////     GÉNÉRAL      ////////////////////// */
 
 :root { 
-	--color-base: hsl(15, 88%, 60%);
-    
-    --color-clair: hsl(15, 95%, 77%);
-    --color-obscur: hsl(15, 90%, 40%);
+	--color-base: hsl(245, 88%, 60%);
+    --color-clair: hsl(245, 95%, 77%);
+    --color-obscur: hsl(245, 90%, 40%);
     --color-highlight: hsl(169, 70%, 55%);
     --color-highlight-clair: hsl(169, 70%, 80%);
-    --color-background: hsl(350, 81%, 95%);
+    --color-background: hsl(245, 81%, 95%);
 }
 
 
@@ -16,7 +15,7 @@ html {
 }
 
 body {
-    font-family: Cairo, 'Noto sans', sans-serif;
+    font-family:  "Assistant", sans-serif;
     margin: 0;
     width: 100%;
     background-color: var(--color-base);
@@ -32,11 +31,7 @@ h1 {
 }
 
 p {
-    font-family: "Assistant", sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    font-style: normal;
-    line-height: 2;
+    margin: 0;
 }
 
 a {
@@ -47,18 +42,61 @@ a {
     color: var(--color-highlight);
 }
 
+/* //////////////////////////////////////////////////     HEADER      ////////////////////// */
+
+.logo {
+    font-family: "Climate Crisis", serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: white;
+}
+
 .container {
     width: 100%;
     max-width: 1080px;
     padding: 0;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul {
+	list-style-type: none;
+	display:flex;
+    float: right;
+    margin: 0 25px;
+    padding: 0;
+}
+
+nav li {
+    padding: 10px 20px;
+    color: white;
+}
+
+nav li a {
+    color: var(--color-base);
+}
+
+
+/* ////////////////////////////////////////////////     STRUCTURE      //////////////////// */
+
+section {
+    width: 100%;
+    max-width: 1080px;
+    padding: 0;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #card-game {
-    width: 100%;
+    width: 95%;
     max-width: 580px;
-    height: 500px;
-    margin: 0 auto;
+    margin: 2.5%;
     border-radius: 50px;
 
     display: flex;
@@ -72,7 +110,8 @@ a {
 }
 
 #card-game form {
-    padding: 10px 50px;
+    width: 88%;
+    padding: 10px 6%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -80,7 +119,7 @@ a {
 }
 
 #card-game h1 {
-    padding: 40px 50px 20px;
+    padding: 50px 8% 20px;
     color: var(--color-base);
 }
 
@@ -95,14 +134,15 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 94%;
+    padding: 5px 2%;
     padding: 5px;
     font-family: "Assistant", serif;
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--color-highlight);
 
-    margin: 0;
+    margin: 10px;
     text-align: right;
     align-self: flex-end;
     background-color: transparent;
@@ -149,7 +189,7 @@ input:focus {
 
 button {
     width: 200px;
-    margin: 10px auto 20px;
+    margin: 20px auto 50px;
     padding: 15px 20px;
     border-radius: 7px;
     border: 1px solid white;
@@ -169,19 +209,60 @@ button:hover {
     cursor: pointer;
     background-color: var(--color-obscur);
     box-shadow:  5px 5px 20px var(--color-clair),
-                -5px -5px 20px var(--color-background);
-               
+                -5px -5px 20px var(--color-background);       
 }
 
-#card-game p {
+#feedback {
     width: 80%;
     height: 50px;
     border-radius: 10px;
     padding: 0 10px;
+    margin: 0 3%;
     background-color: var(--color-background);
 
     font-family: "Assistant", serif;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     font-weight: 800;
     color: var(--color-clair);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cartouche { 
+    width: 90%;
+    height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
+#cartouche div {
+    width: 80px;
+    height: 50px;
+    margin: 0 2px;
+    border-radius: 25px;
+    opacity: 1;
+    background-color: var(--color-highlight-clair);
+    transition: opacity 0.3s ease-in;
+}
+
+#cartouche div:hover {
+    opacity: 0;
+}
+
+
+/* //////////////////////////////////////////////////     FOOTER      ////////////////////// */
+
+footer .logo {
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer p {
+    width: fit-content;
+    margin: 0 auto;
+    color: white;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How much ?</title>
+    <title>Devine mon nombre</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,29 +12,30 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="img/logo.png">
+        <nav class="container">
+            <div class="logo">Devine</div>
             <ul id="menu">
-                <li>How much ?</li>
+                <li>Accueil</li>
                 <li>À propos</li>
                 <li>Contact</li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <section class="container">
+    <section>
         <div id="card-game">
             <h1>Devine mon nombre !</h1>
             <form id="form">
                 <label for="guessInput">Trouve mon nombre entre 1 et 100 ?</label>
                 <input type="number" id="guessInput" placeholder="Votre nombre" min="1" max="100" required>
-                <p id="feedback">Allez, sois pas timide</p>
+                <div id="feedback"><p>Allez, sois pas timide</p></div>
+                <div id="cartouche"></div>
                 <button type="submit">Valider</button>
             </form>
-            
         </div>
     </section>
     <footer>
-
+        <div class="logo">Devine</div>
+        <p>contact@devinemonnombre.com</p>
     </footer>
     <script src="script.js"></script>
 </body>
