@@ -3,6 +3,7 @@ const form = document.getElementById('form');
 const input = document.getElementById('guessInput');
 const feedback = document.getElementById('feedback');
 const cartouche = document.getElementById('cartouche');
+const restartButton = document.getElementById('restart');
 
 // 2 - Générer un nombre aléatoire
 // Arrow function qui donne un chiffre entre min et max
@@ -49,4 +50,11 @@ form.addEventListener('submit', function(event) {
         }      
 
     input.value = ''; // Pour vider la zone
+});
+
+restartButton.addEventListener('click', function(event) {
+    essai = 0;
+    goodNb = (nbRandom(1, 100));
+    cartouchesRestantes();
+    feedback.textContent = "Allez,  c'est reparti !"
 });
