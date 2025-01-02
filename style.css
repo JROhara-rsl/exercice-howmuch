@@ -8,6 +8,9 @@
     --color-highlight-clair: hsl(169, 70%, 80%);
     --color-highlight-tresclair: hsl(169, 90%, 90%);
     --color-background: hsl(245, 81%, 95%);
+
+    --color-valide: hsl(141, 70%, 55%);
+    --color-erreur: hsl(347, 70%, 55%);
 }
 
 
@@ -127,7 +130,8 @@ section {
 .bulle {
     border-radius: 10px;
     width: 80%;
-    height: 50px;
+    min-height: 50px;
+    max-height: 70px;
     padding: 5px 4%;
     margin: 10px 2%;
 }
@@ -244,11 +248,20 @@ button:nth-child(2):hover {    background-color: var(--color-obscur);    }
     flex-direction: column;
 }
 
+#feedback.valide {
+    color: var(--color-valide);
+}
+
+#feedback.erreur {
+    color: var(--color-erreur);
+}
+
 #cartouche { 
     width: 90%;
     height: 50px;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-end;
     margin: 10px;
 }
 
@@ -259,15 +272,14 @@ button:nth-child(2):hover {    background-color: var(--color-obscur);    }
     border-radius: 25px;
     opacity: 1;
     background-color: var(--color-highlight-clair);
-    transition: opacity 0.3s ease-in;
-}
-
-#cartouche div:hover {
-    opacity: 0;
 }
 
 
 /* //////////////////////////////////////////////////     FOOTER      ////////////////////// */
+
+footer {
+    margin: 20px;
+}
 
 footer .logo {
     width: 200px;

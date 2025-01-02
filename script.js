@@ -32,14 +32,21 @@ form.addEventListener('submit', function(event) {
             cartouchesRestantes();
             if (userNb > goodNb) {
                 feedback.textContent = userNb + " est trop grand ! Essaye encore !";
+                feedback.classList.add("erreur");
+                feedback.classList.remove("valide");
             } else if (userNb < goodNb) {
                 feedback.textContent = userNb + " est trop petit ! Essaye encore !";
+                feedback.classList.add("erreur");
+                feedback.classList.remove("valide");
             } else {
                 feedback.textContent = "BRAVO !!! En " + essai + " essais, tu as trouvé le nombre : " + goodNb + ".";
+                feedback.classList.add("valide");
+                feedback.classList.remove("erreur");
             }
         } else {
             feedback.textContent = "Tu as été trop long, le bon nombre était " + goodNb + ". On recommence avec un nouveau nombre.";
-
+            feedback.classList.add("erreur");
+            feedback.classList.remove("valide");
             // Affiche le dernier essai fini
             essai++;
             cartouchesRestantes();
@@ -56,5 +63,7 @@ restartButton.addEventListener('click', function(event) {
     essai = 0;
     goodNb = (nbRandom(1, 100));
     cartouchesRestantes();
-    feedback.textContent = "Allez,  c'est reparti !"
+    feedback.textContent = "Allez,  c'est reparti !";
+    feedback.classList.remove("valide");
+    feedback.classList.remove("erreur");
 });
