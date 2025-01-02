@@ -4,25 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How much ?</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Climate+Crisis&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <img src="img/logo.png">
-        <ul id="menu">
-            <li>How much ?</li>
-            <li>À propos</li>
-            <li>Contact</li>
-        </ul>
-    </header>
-    <section>
         <div class="container">
-            <h1>How much ?</h1>
+            <img src="img/logo.png">
+            <ul id="menu">
+                <li>How much ?</li>
+                <li>À propos</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </header>
+    <section class="container">
+        <div id="card-game">
+            <h1>Devine mon nombre !</h1>
             <form id="form">
-                <label for="guessInput">Seras-tu trouver le nombre entre 1 et 100 auquel je pense ?</label>
+                <label for="guessInput">Trouve mon nombre entre 1 et 100 ?</label>
                 <input type="number" id="guessInput" placeholder="Votre nombre" min="1" max="100" required>
+                <p id="feedback">Allez, sois pas timide</p>
                 <button type="submit">Valider</button>
             </form>
-            <p id="feedback"></p>
+            
         </div>
     </section>
     <footer>
